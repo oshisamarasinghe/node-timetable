@@ -35,6 +35,12 @@
 
 </head>
 <body>
+  <!--my script for view timetable-->
+  <script src="socket.io/socket.io.js"></script>
+  <script src='js/jquery-3.2.1.min'></script>
+  <script src='js/LabTimetable.js'></script>
+
+  <!--end-->
 
 <div class="wrapper">
     <div class="sidebar" data-color="blue" data-image="img/sidebar-5.jpg">
@@ -71,6 +77,12 @@
                         <p>Notifications</p>
                     </a>
                 </li>
+                <li>
+                    <a href="labSearchS.html">
+                        <i class="pe-7s-search"></i>
+                        <p>Lab Search</p>
+                    </a>
+                </li>
                 <li class="dropdown">
                     <a href="timetable.html" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="pe-7s-menu"></i>
@@ -81,7 +93,7 @@
 
                     <ul class="dropdown-menu">
                         <li><a href="LabTimetable.html">Lab Time Tables</a></li>
-                        <li><a href="SemesterTimeTable.html">Semester Time Tables</a></li>
+                        <li><a href="UserTimeTableS.html">My Time Table</a></li>
 
                     </ul>
 
@@ -158,8 +170,7 @@
 
                                 <div class="col-md-4" >
                                     <div class="form-group">
-
-                                        <label class="control-label col-sm-5" for="inputlabCode" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>LAB NAME :</b> </label>
+  <label class="control-label col-sm-5" for="inputlabCode" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>LAB NAME :</b> </label>
                                         <div class="col-sm-3 col-md-3 col-lg-10">
                                             <select class="form-control" id="inputlabCode">
                                                 <option>LAB1-LEVEL 1 LAB</option>
@@ -175,7 +186,7 @@
 
                                         </div>
                                         <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                                            <button type="submit" class="btn btn-info btn-fill btn-round ">VIEW</button>
+                                            <button type="submit" class="btn btn-info btn-fill btn-round " onsubmit="ViewTable()">VIEW</button>
                                         </div>
                                     </div>
                                 </div>

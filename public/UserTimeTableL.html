@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8"/>
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>Semester Timetable Student</title>
+    <title>Lecturer Timetable </title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
@@ -36,14 +35,16 @@
 
 </head>
 <body>
-
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/UserTimetableL.js"></script>
 <div class="wrapper">
     <div class="sidebar" data-color="blue" data-image="img/sidebar-5.jpg">
 
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    SEMESTER TIME TABLE  LECTURER VIEW
+                    USER TIME TABLE VIEW
                 </a>
             </div>
 
@@ -71,7 +72,6 @@
                         <i class="pe-7s-bell"></i>
                         <p>Notifications</p>
                     </a>
-
                 </li>
                 <li>
                     <a href="labsearchL.html">
@@ -86,11 +86,11 @@
                             <b class="caret"></b>
                             <span class="TimeTable"></span></p>
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="labtimetableLEC.html">Lab Timetables</a></li>
-                        <li><a href="semtimetableLEC.html">Semester Timetables</a></li>
-                        <li><a href="UserTimeTableL.html">My Timetable</a></li>
 
+                    <ul class="dropdown-menu">
+
+                        <li><a href="labtimetableLEC.html">Lab Timetables</a></li>
+                        <li><a href="UserTimeTableL.html">My Timetable</a></li>
 
                     </ul>
 
@@ -110,7 +110,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
+                    <a class="navbar-brand" href="#">Notifications</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -128,7 +128,11 @@
                                 <li><a href="#">Another notification</a></li>
                             </ul>
                         </li>
-
+                        <li>
+                            <a href="">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -152,40 +156,10 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title"  >SEMESTER TIMETABLE</h4>
+                                <h4 class="title">USER TIMETABLE</h4>
+                                TIMETABLE NAME :<label style="color: #222222;font-family: Century">Dr fdgdgsdf</label>
 
                             </div>
-                           <br>
-                            <br>
-
-
-                            <div class="row">
-
-                                <div class="col-md-4" >
-                                    <div class="form-group">
-
-                                        <label class="control-label col-sm-5" for="inputSem" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>SEMESTER NO:</b> </label>
-                                        <div class="col-sm-3 col-md-3 col-lg-10">
-                                        <select class="form-control" id="inputSem">
-                                            <option>please select a option</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-
-                                        </select>
-                                        </div>
-                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                                            <button type="submit" class="btn btn-info btn-fill btn-round ">VIEW</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead style="font-family: 'Century Gothic';background-color: #5bc0de" >
@@ -206,6 +180,7 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
+
 
                                     </tr>
                                     <tr>
@@ -238,6 +213,7 @@
                                     <tr>
                                         <td>12.15PM-01.15PM</td>
                                         <td colspan="6" align="center"><h5 style="font-family: 'Century Gothic'">LUNCH TIME</h5></td>
+
                                     </tr>
                                     <tr>
                                         <td>01.15PM-02.15PM</td>
@@ -267,6 +243,15 @@
                                         <td></td>
                                     </tr>
                                     <tr>
+                                        <TD>04.15PM-05.15PM</TD>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
                                         <td>05.15PM-06.15PM</td>
                                         <td></td>
                                         <td></td>
@@ -284,6 +269,7 @@
                                         <td></td>
                                         <td></td>
                                     </tr>
+
                                     </tbody>
                                 </table>
 
