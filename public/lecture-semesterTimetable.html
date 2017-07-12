@@ -43,7 +43,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    SEMESTER TIME TABLE  STUDENT VIEW
+                    SEMESTER TIME TABLE  LECTURER VIEW
                 </a>
             </div>
 
@@ -71,9 +71,10 @@
                         <i class="pe-7s-bell"></i>
                         <p>Notifications</p>
                     </a>
+
                 </li>
                 <li>
-                    <a href="labSearchS.html">
+                    <a href="lecturer-labsearch.html">
                         <i class="pe-7s-search"></i>
                         <p>Lab Search</p>
                     </a>
@@ -86,8 +87,9 @@
                             <span class="TimeTable"></span></p>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="LabTImetable.html">Lab Time Tables</a></li>
-                        <li><a href="SemesterTimeTable.html">Semester Time Tables</a></li>
+                        <li><a href="lecturer-labtimetable.html">Lab Timetables</a></li>
+                        <li><a href="lecture-semesterTimetable.html">Semester Timetables</a></li>
+                        <li><a href="lecturer-timetable.html">User Timetable</a></li>
 
                     </ul>
 
@@ -125,11 +127,7 @@
                                 <li><a href="#">Another notification</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="">
-                                <i class="fa fa-search"></i>
-                            </a>
-                        </li>
+
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -154,36 +152,35 @@
                         <div class="card">
                             <div class="header">
                                 <h4 class="title"  >SEMESTER TIMETABLE</h4>
-
-                            </div>
-                            <br>
-                            <br>
-
-                            <div class="row">
-
-                                <div class="col-md-4" >
-                                    <div class="form-group">
+                                <div class="row">
+                                    <form id="lec-semtimetable">
+                                        <div class="form-group" align="left">
+                                    <div class="col-md-4" >
+                                        <div class="form-group">
 
                                         <label class="control-label col-sm-5" for="inputSem" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>SEMESTER NO:</b> </label>
                                         <div class="col-sm-3 col-md-3 col-lg-10">
-                                            <select class="form-control" id="inputSem">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <option>6</option>
-                                                <option>7</option>
-                                                <option>8</option>
+                                        <select class="form-control" id="inputSem">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
 
-                                            </select>
+                                        </select>
                                         </div>
                                         <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                                            <button type="submit" class="btn btn-info btn-fill btn-round ">VIEW</button>
+                                            <button type="submit" class="btn-fill btn-info btn small ">VIEW</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </form>
+                    </div>
+
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead style="font-family: 'Century Gothic';background-color: #5bc0de" >

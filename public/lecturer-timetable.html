@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>Lab Timetable Student</title>
+    <title>Lecturer Timetable Student</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
@@ -35,12 +35,6 @@
 
 </head>
 <body>
-  <!--my script for view timetable-->
-  <script src="socket.io/socket.io.js"></script>
-  <script src='js/jquery-3.2.1.min'></script>
-  <script src='js/LabTimetable.js'></script>
-
-  <!--end-->
 
 <div class="wrapper">
     <div class="sidebar" data-color="blue" data-image="img/sidebar-5.jpg">
@@ -48,7 +42,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    LAB TIME TABLE STUDENT VIEW
+                    LECTURER TIME TABLE VIEW
                 </a>
             </div>
 
@@ -78,7 +72,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="labSearchS.html">
+                    <a href="lecturer-labsearch.html">
                         <i class="pe-7s-search"></i>
                         <p>Lab Search</p>
                     </a>
@@ -92,8 +86,9 @@
                     </a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="LabTimetable.html">Lab Time Tables</a></li>
-                        <li><a href="UserTimeTableS.html">My Time Table</a></li>
+                        <li><a href="lecturer-labtimetable.html">Lab Timetables</a></li>
+                        <li><a href="lecture-semesterTimetable.html">Semester Timetables</a></li>
+                        <li><a href="lecturer-timetable.html">User Timetable</a></li>
 
                     </ul>
 
@@ -113,7 +108,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Notifications</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -159,42 +154,27 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">LAB TIMETABLE</h4>
-                                <!--p class="category">Here is a subtitle for this table</p-->
-                            </div>
+                                <h4 class="title">LECTURER TIMETABLE</h4>
+                                <div class="row">
+                                    <form id="lec-timetable">
+                                        <div class="form-group" align="left">
+                                            <div class="col-md-4" >
+                                                <div class="form-group">
 
-                            <br>
-                            <br>
+                                            <label class="control-label col-sm-5" for="lectureID" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>Enter ID :</b> </label>
+                                            <div class="col-sm-3 col-md-3 col-lg-10">
+                                                <input type="text"id="lectureID" placeholder="lec1" class="form-control">
 
-                            <div class="row">
-
-                                <div class="col-md-4" >
-                                    <div class="form-group">
-  <label class="control-label col-sm-5" for="inputlabCode" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>LAB NAME :</b> </label>
-                                        <div class="col-sm-3 col-md-3 col-lg-10">
-                                            <select class="form-control" id="inputlabCode">
-                                                <option>LAB1-LEVEL 1 LAB</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <option>6</option>
-                                                <option>7</option>
-                                                <option>8</option>
-
-                                            </select>
-
-                                        </div>
-                                        <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                                            <button type="submit" class="btn btn-info btn-fill btn-round " onsubmit="ViewTable()">VIEW</button>
+                                            </div>
+                                            <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                                                <button type="submit" class="btn-info btn-fill btn small ">VIEW</button>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
-
-                            </div>
-
-
-
+                           </form>
+                    </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped">
                                     <thead style="font-family: 'Century Gothic';background-color: #5bc0de" >
@@ -315,21 +295,21 @@
 
 
                     <div class="content">
-            <div class="container-fluid">
+                        <div class="container-fluid">
 
+                        </div>
+                    </div>
+
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <p class="copyright pull-right">
+                                &copy; 2017 <a href="#">Smart Notice Board</a> | CERIS
+                            </p>
+                        </div>
+                    </footer>
+
+                </div>
             </div>
-        </div>
-
-        <footer class="footer">
-            <div class="container-fluid">
-                <p class="copyright pull-right">
-                    &copy; 2017 <a href="#">Smart Notice Board</a> | CERIS
-                </p>
-            </div>
-        </footer>
-
-    </div>
-</div>
         </div>
     </div>
 </div>

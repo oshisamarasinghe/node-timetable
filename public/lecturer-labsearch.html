@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>Lecturer Timetable </title>
+    <title>LAB SEARCH</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
@@ -17,16 +17,15 @@
     <!-- Animation library for notifications   -->
     <link href="css/animate.min.css" rel="stylesheet"/>
 
-    <!-- style library for notifications   -->
-    <link href="css/TimeTable.css" rel="stylesheet"/>
-
     <!--  Light Bootstrap Table core CSS    -->
     <link href="css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!-- style library for notifications   -->
+    <link href="css/TimeTable.css" rel="stylesheet"/>
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="css/demo.css" rel="stylesheet"/>
-
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -42,7 +41,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="#" class="simple-text">
-                    USER TIME TABLE VIEW
+                    FREE  LAB SEARCH LECTURER VIEW
                 </a>
             </div>
 
@@ -72,7 +71,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="labsearchL.html">
+                    <a href="lecturer-labsearch.html">
                         <i class="pe-7s-search"></i>
                         <p>Lab Search</p>
                     </a>
@@ -84,19 +83,16 @@
                             <b class="caret"></b>
                             <span class="TimeTable"></span></p>
                     </a>
-
                     <ul class="dropdown-menu">
-
-                        <li><a href="LabTimetable.html">Lab Timetables</a></li>
-                        <li><a href="UserTimeTableS.html.html">My Timetable</a></li>
-
+                        <li><a href="lecturer-labtimetable.html">Lab Timetables</a></li>
+                        <li><a href="lecture-semesterTimetable.html">Semester Timetables</a></li>
+                        <li><a href="lecturer-timetable.html">User Timetable</a></li>
                     </ul>
 
                 </li>
             </ul>
         </div>
     </div>
-
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -108,7 +104,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Notifications</a>
+
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -148,133 +144,117 @@
                 </div>
             </div>
         </nav>
+
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">USER TIMETABLE</h4>
-                                TIMETABLE NAME :<label style="color: #222222;font-family: Century">Dr fdgdgsdf</label>
+                                <h4 class="title">FREE LAB SEARCH QUERY</h4>
+                                <div class="content">
+                                    <div class="container-fluid">
+                                        <h4>please fill the below fields </h4>
+                                        <p style="color: #bb0502">* All fields are mandatory</p>
+                                        <form>
+                                            <div class="row">
 
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
-                                    <thead style="font-family: 'Century Gothic';background-color: #5bc0de" >
-                                    <th>TIME</th>
-                                    <th>MONDAY</th>
-                                    <th>TUESDAY</th>
-                                    <th>WEDNESDAY</th>
-                                    <th>THURSDAY</th>
-                                    <th>FRIDAY</th>
-                                    <th>SATURDAY</th>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>08.15AM-09.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+
+                                                        <label for="inputDate"  style="color: #080808;font-size:medium">Date: </label>
+                                                        <input type="date" class="form-control" id="inputDate" ><br></div>
 
 
-                                    </tr>
-                                    <tr>
-                                        <td>09.15AM-10.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>10.15AM-11.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>11.15AM-12.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>12.15PM-01.15PM</td>
-                                        <td colspan="6" align="center"><h5 style="font-family: 'Century Gothic'">LUNCH TIME</h5></td>
+                                                </div>
 
-                                    </tr>
-                                    <tr>
-                                        <td>01.15PM-02.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>02.15PM-03.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>03.15PM-04.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <TD>04.15PM-05.15PM</TD>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>05.15PM-06.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>06.15PM-07.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
 
-                                    </tbody>
-                                </table>
+                                                        <label for="inputTime"  style="color: #080808;font-size: medium">Time: </label>
+                                                        <input type="time" class="form-control" id="inputTime"><br></div>
+                                                </div>
+                                            </div>
 
+                                            <div class="row">
+                                                <div class="col-md-4" >
+                                                    <button type="submit" class="btn btn-info btn-fill btn-round ">SEARCH</button>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group" align="left">
+                                                <h4 style="color: #1D62F0">Available Free Labs</h4>
+                                            </div>
+
+                                            <div class="content table-responsive table-full-width">
+                                                <table class="table table-hover table-striped" style="font-family: 'Century Gothic'">
+                                                    <thead align="center">
+                                                    <th>LAB CODE</th>
+                                                    <th>LAB NAME</th>
+
+                                                    </thead>
+                                                    <tbody align="left">
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td contenteditable="true"></td>
+                                                        <td contenteditable="true"></td>
+
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+
+
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+
+                                <!--p class="category">Here is a subtitle for this table</p-->
                             </div>
                         </div>
                     </div>
-
 
 
                     <div class="content">
