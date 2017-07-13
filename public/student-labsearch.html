@@ -155,6 +155,7 @@
                                 <h4 class="title">FREE LAB SEARCH QUERY</h4>
                                 <div class="content">
                                     <div class="container-fluid">
+                                        <form id="search">
                                         <h4>please fill the below fields </h4>
                                         <p style="color: #bb0502">* All fields are mandatory</p>
                                     <form>
@@ -182,6 +183,7 @@
                                                 <button type="submit" class=" btn-info btn-fill btn small ">SEARCH</button>
                                             </div>
                                             </div>
+                                    </form>
 
 
                                         <div class="form-group" align="left">
@@ -294,24 +296,9 @@
 <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
 <script src="js/light-bootstrap-dashboard.js"></script>
 
-<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="js/demo.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
+<script src="/socket.io/socket.io.js"></script>
 
-//        	demo.initChartist();
-
-        $.notify({
-            icon: 'pe-7s-gift',
-            message: "Welcome to <b>Smart Notice Board</b>"
-
-        }, {
-            type: 'info',
-            timer: 4000
-        });
-
-    });
-</script>
-
+<script src="/js/student.js"></script>
 </html>

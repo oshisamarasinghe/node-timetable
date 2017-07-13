@@ -72,12 +72,7 @@
                         <p>Notifications</p>
                     </a>
                 </li>
-                <li>
-                    <a href="lecturer-labsearch.html">
-                        <i class="pe-7s-search"></i>
-                        <p>Lab Search</p>
-                    </a>
-                </li>
+
                 <li class="dropdown">
                     <a href="timetable.html" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="pe-7s-menu"></i>
@@ -86,7 +81,7 @@
                     </a>
                     <!--ul class="dropdown-menu">
                         <li><a href="#">Lab Time Tables</a></li>
-                        <li><a href="#">Semester Time Tables</a></li>
+                        <li><a href=timetableNamester Time Tables</a></li>
 
                     </ul-->
 
@@ -147,7 +142,7 @@
         <div class="section section-tabs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-11">
+                    <div class="col-md-10">
 
 
                         <!-- Tabs with icons on Card -->
@@ -199,6 +194,18 @@
                                                 <small id="filleHelp" class="form-text text-muted">fill the relevant identity according to the type selected.</small-->
 
                                                 <div class="row">
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="inputName"
+                                                                   style="color: #080808;font-size: small">USERNAME </label>
+                                                            <input type="text" class="form-control"
+                                                                   placeholder="Name" id="inputName">
+
+                                                        </div>
+
+                                                        <!--input type="text" class="form-control" placeholder="City" value="Mike"-->
+                                                    </div>
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="inputID"
@@ -210,6 +217,7 @@
 
                                                         <!--input type="text" class="form-control" placeholder="City" value="Mike"-->
                                                     </div>
+
                                                 </div>
 
                                             </div>
@@ -364,30 +372,43 @@
                                                         </div>
 
 
-                                                        <div class="row">
+                <div class="row">
+                 <div class="col-md-4">
+                     <div class="form-group" align="left">
+                             <label for="selectID" style="color: #080808;font-size: small">Table ID: </label>
+                                <select class="form-control" id="selectID">
+                                    <option value="lab1">LAB1-LEVEL 1 LAB</option>
+                                     <option value="lab2">LAB2-LEVEL 2 LAB</option>
+                                     <option value="lab3">LAB3-ICE LAB</option>
+                                      <option value="lab4">LAB4-NETWORK LAB</option>
+                                      <option value="lab5">LAB5-HARDWARE LAB</option>
+                                      <option value="sem02">Semester 2</option>
+                                      <option value="sem03">Semester 3</option>
+                                      <option value="sem04">Semester 4</option>
+                                      <option value="sem05">Semester 5</option>
+                                      <option value="sem06">Semester 6</option>
+                                      <option value="sem07">Semester 7</option>
+                                      <option value="sem08">Semester 8</option>
+                                </select>
+                             </div>
+                          </div>
+                    <div class="col-md-4">
+                        <div class="form-group" align="left">
+                            <label for="updateType" style="color: #080808;font-size: small">UPDATE OPTION: </label>
+                            <select class="form-control" id="updateType">
+                                <option value="tem">Temporary</option>
+                                <option value="per">Permanent</option>
 
-                                                            <div class="col-md-4">
-                                                                <div class="form-group" align="left">
-                                                                    <label for="selectID"
-                                                                           style="color: #080808;font-size: small">Table
-                                                                        ID: </label>
-                                                                    <select class="form-control" id="selectID">
-                                                                        <option value="lab1">LAB-01</option>
-                                                                        <option value="lab2">LAB-02</option>
-                                                                        <option value="lec1">LEC-01</option>
-                                                                        <option value="lec2">LEC-02</option>
-                                                                        <option value="sem1">SEM-01</option>
-                                                                            <option value="sem2">SEM-02</option>
 
+                            </select>
+                        </div>
+                    </div>
 
-                                                                    </select>
-                                                                </div>
-                                                            </div>
                                        <div class="col-md-4">
                                             <div class="form-group">
 
                                           <br>
-                                            <button id="loadtbl" type="submit" class="btn btn-primary">LOAD TIMETABLE</button>
+                                            <button id="loadtbl" type="submit" class="btn btn-primary" >LOAD TIMETABLE</button>
                                               </div>
                                          </div>
                                         </div>
@@ -398,7 +419,7 @@
                                                             </div>
                                                             <div class="content table-responsive table-full-width">
                                                                 <table class="table table-hover table-striped"
-                                                                       style="font-family: Arial ;">
+                                                                       style="font-family: Arial ;" id="updateTable">
                                                                     <thead align="center">
                                                                     <th>TIME</th>
                                                                     <th>MONDAY</th>
@@ -537,6 +558,8 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
+                                                    </form>
+                                                    <form id="save-update">
                                                         <div class="row" align="right">
                                                             <button id="save" type="submit" class="btn btn-primary">SAVE
                                                                 UPDATE
@@ -577,12 +600,18 @@
                                                         <label for="vtbl_id" style="color: #080808;font-size: medium">Table
                                                             ID </label>
                                                         <select class="form-control" id="vtbl_id">
-                                                            <option value="lab1">LAB-01</option>
-                                                            <option value="lab2">LAB-02</option>
-                                                            <option value="lec1">LEC-01</option>
-                                                            <option value="lec2">LEC-02</option>
-                                                            <option value="sem1">SEM-01</option>
-                                                            <option value="sem2">SEM-02</option>
+                                                            <option value="lab1">LAB1-LEVEL 1 LAB</option>
+                                                            <option value="lab2">LAB2-LEVEL 2 LAB</option>
+                                                            <option value="lab3">LAB3-ICE LAB</option>
+                                                            <option value="lab4">LAB4-NETWORK LAB</option>
+                                                            <option value="lab5">LAB5-HARDWARE LAB</option>
+                                                            <option value="sem02">Semester 2</option>
+                                                            <option value="sem03">Semester 3</option>
+                                                            <option value="sem04">Semester 4</option>
+                                                            <option value="sem05">Semester 5</option>
+                                                            <option value="sem06">Semester 6</option>
+                                                            <option value="sem07">Semester 7</option>
+                                                            <option value="sem08">Semester 8</option>
                                                         </select>
                                                     </div>
                                                     <div align="left">

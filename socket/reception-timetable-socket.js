@@ -6,58 +6,121 @@ const timetableController = require('./../controller/timetable-controller');
 class ReceptionTimeTableSocket {
     constructor(io, socket) {
         socket.on('addNewTable', (timetable, callback) => {
-            //console.log(timetable);
-            timetableController.addNewTimeTable(timetable).then((res) => {
-                console.log(res);
-                callback(undefined, res);
-            }, (err) => {
-                callback(err);
-            });
+            if (timetable.timeTableType == 'sem') {
+                timetableController.addNewSemTimeTable(timetable).then((res) => {
+                    callback(undefined, res);
+                }, (err) => {
+                    callback(err);
+                });
+
+            } else if (timetable.timeTableType == 'lab') {
+                timetableController.addNewLabTimeTable(timetable).then((res) => {
+                    callback(undefined, res);
+                }, (err) => {
+                    callback(err);
+                });
+
+            }else if (timetable.timeTableType == 'lec') {
+                timetableController.addNewLecTimeTable(timetable).then((res) => {
+                    callback(undefined, res);
+                }, (err) => {
+                    callback(err);
+                });
+
+            }
         });
 
-        /*socket.on('addLecNewTable', (timetable, callback) => {
-            timetableController.addNewLecTimeTable(timetable).then((res) => {
-                console.log(res);
-                callback(undefined, res);
-            }, (err) => {
-                callback(err);
-            });
+
+
+       socket.on('LoadTimetable', (timetable, callback) => {
+
+           if (timetable.timeTableType == 'sem') {
+               timetableController.viewSemTimeTable(timetable).then((res) => {
+                   console.log(res);
+                   callback(undefined, res);
+
+               }, (err) => {
+                   callback(err);
+               });
+           } else if (timetable.timeTableType == 'lab') {
+               timetableController.viewLabTimeTable(timetable).then((res) => {
+                   console.log(res);
+                   callback(undefined, res);
+
+               }, (err) => {
+                   callback(err);
+               });
+           }else if (timetable.timeTableType == 'lec') {
+               timetableController.viewLecTimeTable(timetable).then((res) => {
+                   console.log(res);
+                   callback(undefined, res);
+
+               }, (err) => {
+                   callback(err);
+               });
+           }
         });
 
-        socket.on('addLabNewTable', (timetable, callback) => {
-            timetableController.addNewLabTimeTable(timetable).then((res) => {
-                callback(undefined, res);
-            }, (err) => {
-                callback(err);
 
-            });
-        });*/
 
-        socket.on('LoadTimetable', (timetable, callback) => {
+        socket.on('viewTimetable',(timetable,callback)=> {
+            console.log(timetable.timeTableType);
+            if (timetable.timeTableType == 'sem') {
 
-                timetableController.loadTimeTable(timetable).then((res) => {
+                timetableController.viewSemTimeTable(timetable).then((res) => {
+
+                    callback(undefined, res);
+
+                }, (err) => {
+                    callback(err);
+                });
+            } else if (timetable.timeTableType == 'lab') {
+                timetableController.viewLabTimeTable(timetable).then((res) => {
                     console.log(res);
                     callback(undefined, res);
 
                 }, (err) => {
                     callback(err);
                 });
+            }else if (timetable.timeTableType == 'lec') {
+                timetableController.viewLecTimeTable(timetable).then((res) => {
+                    console.log(res);
+                    callback(undefined, res);
 
+                }, (err) => {
+                    callback(err);
+                });
+            }
         });
 
+        socket.on('SaveUpdate', (timetable, callback) => {
 
+            if (timetable.timeTableType == 'sem') {
+                timetableController.updateSemTimeTable(timetable).then((res) => {
 
-        socket.on('viewTimetable',(timetable,callback)=> {
+                    callback(undefined, res);
 
-            timetableController.viewTimeTable(timetable).then((res) => {
-                console.log(res);
-                callback(undefined, res);
+                }, (err) => {
+                    callback(err);
+                });
+            } else if (timetable.timeTableType == 'lab') {
+                timetableController.updateLabTimeTable(timetable).then((res) => {
+                    console.log(res);
+                    callback(undefined, res);
 
-            }, (err) => {
-                callback(err);
-            });
+                }, (err) => {
+                    callback(err);
+                });
+            }else if (timetable.timeTableType == 'lec') {
+                timetableController.updateLecTimeTable(timetable).then((res) => {
+                    console.log(res);
+                    callback(undefined, res);
+
+                }, (err) => {
+                    callback(err);
+                });
+            }
         });
-
 
 
     }

@@ -1,5 +1,5 @@
 /*
- oshadhi-2017/07/10
+
  **oshadhi-2017/07/11
  */
 
@@ -17,10 +17,13 @@ $('#addt').on('submit', function (e) {
     e.preventDefault();
     var id = $('#inputID').val();
     var type = $('#ttype').val();
+    var name=$('#inputName').val();
 
         socket.emit('addNewTable', {
-            tbltype: type,
-            tblid: id,
+            timeTableType: type,
+            timeTableId: id,
+            timeTableName:name,
+            //timeTableName:
             row1: [$('#ac012').text(), $('#ac013').text(), $('#ac014').text(), $('#ac015').text(), $('#ac016').text(), $('#ac017').text()],
             row2: [$('#ac022').text(), $('#ac023').text(), $('#ac024').text(), $('#ac025').text(), $('#ac026').text(), $('#ac027').text()],
             row3: [$('#ac032').text(), $('#ac033').text(), $('#ac034').text(), $('#ac035').text(), $('#ac036').text(), $('#ac037').text()],
@@ -37,64 +40,25 @@ $('#addt').on('submit', function (e) {
             }
             console.log(res);
         });
-    /*}else if(type =='lec'){
-        socket.emit('addLecNewTable', {
-            tbltype: type,
-            tblid: id,
-            row1: [$('#ac012').text(), $('#ac013').text(), $('#ac014').text(), $('#ac015').text(), $('#ac016').text(), $('#ac017').text()],
-            row2: [$('#ac022').text(), $('#ac023').text(), $('#ac024').text(), $('#ac025').text(), $('#ac026').text(), $('#ac027').text()],
-            row3: [$('#ac032').text(), $('#ac033').text(), $('#ac034').text(), $('#ac035').text(), $('#ac036').text(), $('#ac037').text()],
-            row4: [$('#ac042').text(), $('#ac043').text(), $('#ac044').text(), $('#ac045').text(), $('#ac046').text(), $('#ac047').text()],
-            row6: [$('#ac062').text(), $('#ac063').text(), $('#ac064').text(), $('#ac065').text(), $('#ac066').text(), $('#ac067').text()],
-            row7: [$('#ac072').text(), $('#ac073').text(), $('#ac074').text(), $('#ac075').text(), $('#ac076').text(), $('#ac077').text()],
-            row8: [$('#ac082').text(), $('#ac083').text(), $('#ac084').text(), $('#ac085').text(), $('#ac086').text(), $('#ac087').text()],
-            row9: [$('#ac092').text(), $('#ac093').text(), $('#ac094').text(), $('#ac095').text(), $('#ac096').text(), $('#ac097').text()],
-            row10: [$('#ac102').text(), $('#ac103').text(), $('#ac104').text(), $('#ac105').text(), $('#ac106').text(), $('#ac107').text()],
-            row11: [$('#ac112').text(), $('#ac113').text(), $('#ac114').text(), $('#ac115').text(), $('#ac116').text(), $('#ac117').text()]
-        }, function (err, res) {
-            if(err){
-                return console.log(err);
-            }
-            console.log(res);
-        });
-
-    }else if(type =='lab'){
-        socket.emit('addLabNewTable', {
-            tbltype: type,
-            tblid: id,
-            row1: [$('#ac012').text(), $('#ac013').text(), $('#ac014').text(), $('#ac015').text(), $('#ac016').text(), $('#ac017').text()],
-            row2: [$('#ac022').text(), $('#ac023').text(), $('#ac024').text(), $('#ac025').text(), $('#ac026').text(), $('#ac027').text()],
-            row3: [$('#ac032').text(), $('#ac033').text(), $('#ac034').text(), $('#ac035').text(), $('#ac036').text(), $('#ac037').text()],
-            row4: [$('#ac042').text(), $('#ac043').text(), $('#ac044').text(), $('#ac045').text(), $('#ac046').text(), $('#ac047').text()],
-            row6: [$('#ac062').text(), $('#ac063').text(), $('#ac064').text(), $('#ac065').text(), $('#ac066').text(), $('#ac067').text()],
-            row7: [$('#ac072').text(), $('#ac073').text(), $('#ac074').text(), $('#ac075').text(), $('#ac076').text(), $('#ac077').text()],
-            row8: [$('#ac082').text(), $('#ac083').text(), $('#ac084').text(), $('#ac085').text(), $('#ac086').text(), $('#ac087').text()],
-            row9: [$('#ac092').text(), $('#ac093').text(), $('#ac094').text(), $('#ac095').text(), $('#ac096').text(), $('#ac097').text()],
-            row10: [$('#ac102').text(), $('#ac103').text(), $('#ac104').text(), $('#ac105').text(), $('#ac106').text(), $('#ac107').text()],
-            row11: [$('#ac112').text(), $('#ac113').text(), $('#ac114').text(), $('#ac115').text(), $('#ac116').text(), $('#ac117').text()]
-        }, function (err, res) {
-            if(err){
-                return console.log(err);
-            }
-            console.log(res);
-        });
-
-    }*/
 
 });
+var uniqueId={};
 
 $('#updt').on('submit',(e)=>{
     e.preventDefault();
     var id = $('#selectID').val();
+    var name=$('#selectID option:selected').text();
     var type = $('#type').val();
+
     socket.emit('LoadTimetable',{
-        tbltype: type,
-        tblid: id 
+        timeTableType: type,
+        timeTableId: id,
+        timeTableName:name
     },function (err,res) {
         if(err){
             return console.log(err);
         }else{
-            //console.log(res.row1[0]);
+            console.log(res);
             if(res !=null){
                 $('#pc012').html(res.row1[0]); $('#pc013').html(res.row1[1]);$('#pc014').html(res.row1[2]);$('#pc015').html(res.row1[3]);$('#pc016').html(res.row1[4]);$('#pc017').html(res.row1[5]);
 
@@ -116,12 +80,53 @@ $('#updt').on('submit',(e)=>{
 
                 $('#pc112').html(res.row11[0]);$('#pc113').html(res.row11[1]);$('#pc114').html(res.row11[2]);$('#pc115').html(res.row11[3]);$('#pc116').html(res.row11[4]);$('#pc117').html(res.row11[5]);
 
+                uniqueId=res._id;
+                console.log(uniqueId);
             }
+
 
         }
 
     });
-    
+
+});
+
+$('#save-update').on('submit',(e)=>{
+    e.preventDefault();
+    //var uniqueId=uniqueId;
+    var id = $('#selectID').val();
+    var name=$('#selectID option:selected').text();
+    var type = $('#type').val();
+    alert('Do you want to confirm save?');
+
+    socket.emit('SaveUpdate',{
+        timeTableType: type,
+        timeTableId: id,
+        timeTableName:name,
+
+        /*row1: [$('#pc012').text(), $('#pc013').text(), $('#pc014').text(), $('#pc015').text(), $('#pc016').text(), $('#pc017').text()],
+        row2: [$('#pc022').text(), $('#pc023').text(), $('#pc024').text(), $('#pc025').text(), $('#pc026').text(), $('#pc027').text()],
+        row3: [$('#pc032').text(), $('#pc033').text(), $('#pc034').text(), $('#pc035').text(), $('#pc036').text(), $('#pc037').text()],
+        row4: [$('#pc042').text(), $('#pc043').text(), $('#pc044').text(), $('#pc045').text(), $('#pc046').text(), $('#pc047').text()],
+        row6: [$('#pc062').text(), $('#pc063').text(), $('#pc064').text(), $('#pc065').text(), $('#pc066').text(), $('#pc067').text()],
+        row7: [$('#pc072').text(), $('#pc073').text(), $('#pc074').text(), $('#pc075').text(), $('#pc076').text(), $('#pc077').text()],
+        row8: [$('#pc082').text(), $('#pc083').text(), $('#pc084').text(), $('#pc085').text(), $('#pc086').text(), $('#pc087').text()],
+        row9: [$('#pc092').text(), $('#pc093').text(), $('#pc094').text(), $('#pc095').text(), $('#pc096').text(), $('#pc097').text()],
+        row10: [$('#pc102').text(), $('#pc103').text(), $('#pc104').text(), $('#pc105').text(), $('#pc106').text(), $('#pc107').text()],
+        row11: [$('#pc112').text(), $('#pc113').text(), $('#pc114').text(), $('#pc115').text(), $('#pc116').text(), $('#pc117').text()]
+        */
+
+    },function (err,res) {
+        if(err){
+            return console.log(err);
+        }else{
+            if(res!=null){
+                console.log(res)
+            }
+
+        }
+    });
+
 });
 
 
@@ -129,10 +134,14 @@ $('#updt').on('submit',(e)=>{
 $('#viewtable').on('submit',(e)=>{
     e.preventDefault();
     var id=$('#vtbl_id').val();
+    var name=$('#vtbl_id option:selected').text();
     var type=$('#tbltype').val();
+    console.log(type);
     socket.emit('viewTimetable',{
-        tblid:id,
-        tbltype:type
+        timeTableId:id,
+        timeTableType:type,
+        timeTableName:name
+
     },function(err,res){
         if(err){
             console.log(err);
@@ -165,12 +174,37 @@ $('#viewtable').on('submit',(e)=>{
 
     });
 
-
-
-
-
-
 });
+/*function filltable(){
+    var table=document.getElementById('updateTable');
+    var id = $('#selectID').val();
+    var type = $('#type').val();
+    //console.log(table);
+    socket.emit('LoadTimetable',{
+        timeTableType: type,
+        timeTableId: id
+    },function (err,res) {
+        if(err){
+
+        }else{
+            if(res!=null){
+                console.log(res);
+                var responseTable  =[res.row1,res.row2,res.row3,res.row4,res.row6,res.row7,res.row8,res.row9,res.row10,res.row11];
+                console.log('responsetable',responseTable);
+                for(var i=1,row;row=table.rows[i];i++){
+                    for (var j=1,col; col= row.cells[j];j++){
+                        console.log(responseTable[i][j]);
+                    }
+
+                }
+
+
+
+            }
+        }
+
+    });
+}*/
 
 //new timetable  add function
 // function addTable() {
@@ -182,8 +216,8 @@ $('#viewtable').on('submit',(e)=>{
 //     }
 //     else {
 //         socket.emit('addNewTable', {
-//             tbltype: type,
-//             tblid: id,
+//             timeTableType: type,
+//             timeTableId: id,
 //             row1: [$('#ac012').text(), $('#ac013').text(), $('#ac014').text(), $('#ac015').text(), $('#ac016').text(), $('#ac017').text()],
 //             row2: [$('#ac022').text(), $('#ac023').text(), $('#ac024').text(), $('#ac025').text(), $('#ac026').text(), $('#ac027').text()],
 //             row3: [$('#ac032').text(), $('#ac033').text(), $('#ac034').text(), $('#ac035').text(), $('#ac036').text(), $('#ac037').text()],
@@ -204,7 +238,7 @@ $('#viewtable').on('submit',(e)=>{
 //     var type = $('#type').val();
 // //console.log(id,type);
 //     socket.emit('loadTimetable', {
-//         tbltype: type,
-//         tblid: id,
+//         timeTableType: type,
+//         timeTableId: id,
 //     });
 // }

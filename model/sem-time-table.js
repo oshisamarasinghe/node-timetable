@@ -4,13 +4,16 @@
 const mongoose = require('mongoose');
 
 var SemTimeTable = mongoose.model('SemTimeTable', {
-    tblid: {
+    timeTableId: {
         type: String,
         //minlength: 5
     },
-    tbltype: {
+    timeTableType: {
         type: String,
         default: 'sem'
+    },
+    timeTableName:{
+        type:String
     },
     row1: {
         type: [String]
@@ -41,6 +44,10 @@ var SemTimeTable = mongoose.model('SemTimeTable', {
     },
     row11: {
         type: [String]
+    },
+    updated:{
+        type:Boolean,
+        default:false
     }
 });
 

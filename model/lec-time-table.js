@@ -4,13 +4,16 @@
 const mongoose = require('mongoose');
 
 var LecTimeTable = mongoose.model('LecTimeTable', {
-    tblid: {
+    timeTableId: {
         type: String,
         //minlength: 5
     },
-    tbltype: {
+    timetableType: {
         type: String,
         default: 'lec'
+    },
+    timeTableName:{
+        type:String
     },
     row1: {
         type: [String]
@@ -41,6 +44,10 @@ var LecTimeTable = mongoose.model('LecTimeTable', {
     },
     row11: {
         type: [String]
+    },
+    updated:{
+        type:Boolean,
+        default:false
     }
 });
 

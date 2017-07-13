@@ -4,13 +4,16 @@
 const mongoose = require('mongoose');
 
 var LabTimeTable = mongoose.model('LabTimeTable', {
-    tblid: {
+    timeTableId: {
         type: String,
         //minlength: 5
     },
-    tbltype: {
+    timeTableType: {
         type: String,
         default: 'lab'
+    },
+    timeTableName:{
+        type:String
     },
     row1: {
         type: [String]
@@ -41,7 +44,13 @@ var LabTimeTable = mongoose.model('LabTimeTable', {
     },
     row11: {
         type: [String]
+    },
+    updated:{
+        type:Boolean,
+        default:false
     }
+
+
 });
 
 module.exports = {LabTimeTable};

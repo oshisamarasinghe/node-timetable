@@ -35,12 +35,7 @@
 
 </head>
 <body>
-  <!--my script for view timetable-->
-  <script src="socket.io/socket.io.js"></script>
-  <script src='js/jquery-3.2.1.min'></script>
-  <script src='js/LabTimetable.js'></script>
 
-  <!--end-->
 
 <div class="wrapper">
     <div class="sidebar" data-color="blue" data-image="img/sidebar-5.jpg">
@@ -168,20 +163,17 @@
                                         <label class="control-label col-sm-5" for="inputlabCode" style="color: #080808;font-size: small;font-family: 'Century Gothic'"><b>LAB NAME :</b> </label>
                                         <div class="col-sm-3 col-md-3 col-lg-10">
                                             <select class="form-control" id="inputlabCode">
-                                                <option>LAB1-LEVEL 1 LAB</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <option>6</option>
-                                                <option>7</option>
-                                                <option>8</option>
+                                                <option value="lab1">LAB1-LEVEL 1 LAB</option>
+                                                <option value="lab2">LAB2-LEVEL 2 LAB</option>
+                                                <option value="lab3">LAB3-ICE LAB</option>
+                                                <option value="lab4">LAB4-NETWORK LAB</option>
+                                                <option value="lab5">LAB5-HARDWARE LAB</option>
 
                                             </select>
 
                                         </div>
                                         <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
-                                            <button type="submit" class=" btn-info btn-fill btn small " onsubmit="ViewTable()">VIEW</button>
+                                            <button type="submit" class=" btn-info btn-fill btn small ">VIEW</button>
                                         </div>
                                     </div>
                                 </div>
@@ -192,7 +184,7 @@
 
 
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
+                                <table class="table table-hover table-striped" >
                                     <thead style="font-family: 'Century Gothic';background-color: #5bc0de" >
                                     <th>TIME</th>
                                     <th>MONDAY</th>
@@ -204,101 +196,100 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>08.15AM-09.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
+                                        <td id="c011">08.15AM-09.15AM</td>
+                                        <td id="c012"></td>
+                                        <td id="c013"></td>
+                                        <td id="c014"></td>
+                                        <td id="c015"></td>
+                                        <td id="c016"></td>
+                                        <td id="c017"></td>
 
                                     </tr>
                                     <tr>
-                                        <td>09.15AM-10.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c021">09.15AM-10.15AM</td>
+                                        <td id="c022"></td>
+                                        <td id="c023"></td>
+                                        <td id="c024"></td>
+                                        <td id="c025"></td>
+                                        <td id="c026"></td>
+                                        <td id="c027"></td>
                                     </tr>
                                     <tr>
                                         <td>10.15AM-11.15AM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c032"></td>
+                                        <td id="c033"></td>
+                                        <td id="c034"></td>
+                                        <td id="c035"></td>
+                                        <td id="c036"></td>
+                                        <td id="c037"></td>
                                     </tr>
                                     <tr>
                                         <td>11.15AM-12.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c042"></td>
+                                        <td id="c043"></td>
+                                        <td id="c044"></td>
+                                        <td id="c045"></td>
+                                        <td id="c046"></td>
+                                        <td id="c047"></td>
                                     </tr>
                                     <tr>
                                         <td>12.15PM-01.15PM</td>
                                         <td colspan="6" align="center"><h5 style="font-family: 'Century Gothic'">LUNCH TIME</h5></td>
-
                                     </tr>
                                     <tr>
                                         <td>01.15PM-02.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c062"></td>
+                                        <td id="c063"></td>
+                                        <td id="c064"></td>
+                                        <td id="c065"></td>
+                                        <td id="c066"></td>
+                                        <td id="c067"></td>
                                     </tr>
                                     <tr>
                                         <td>02.15PM-03.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c072"></td>
+                                        <td id="c073"></td>
+                                        <td id="c074"></td>
+                                        <td id="c075"></td>
+                                        <td id="c076"></td>
+                                        <td id="c077"></td>
+
                                     </tr>
                                     <tr>
                                         <td>03.15PM-04.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c082"></td>
+                                        <td id="c083"></td>
+                                        <td id="c084"></td>
+                                        <td id="c085"></td>
+                                        <td id="c086"></td>
+                                        <td id="c087"></td>
                                     </tr>
                                     <tr>
-                                        <TD>04.15PM-05.15PM</TD>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td>04.15PM-05.15PM</td>
+                                        <td id="c092"></td>
+                                        <td id="c093"></td>
+                                        <td id="c094"></td>
+                                        <td id="c095"></td>
+                                        <td id="c096"></td>
+                                        <td id="c097"></td>
                                     </tr>
                                     <tr>
                                         <td>05.15PM-06.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c102"></td>
+                                        <td id="c103"></td>
+                                        <td id="c104"></td>
+                                        <td id="c105"></td>
+                                        <td id="c106"></td>
+                                        <td id="c107"></td>
                                     </tr>
                                     <tr>
                                         <td>06.15PM-07.15PM</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td id="c112"></td>
+                                        <td id="c113"></td>
+                                        <td id="c114"></td>
+                                        <td id="c115"></td>
+                                        <td id="c116"></td>
+                                        <td id="c117"></td>
                                     </tr>
 
                                     </tbody>
@@ -327,6 +318,7 @@
     </div>
 </div>
         </div>
+        </div>
     </div>
 </div>
 </body>
@@ -350,21 +342,8 @@
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="js/demo.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
+<script src="/socket.io/socket.io.js"></script>
 
-//        	demo.initChartist();
-
-        $.notify({
-            icon: 'pe-7s-gift',
-            message: "Welcome to <b>Smart Notice Board</b>"
-
-        }, {
-            type: 'info',
-            timer: 4000
-        });
-
-    });
-</script>
+<script src="/js/student.js"></script>
 
 </html>
