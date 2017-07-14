@@ -12,11 +12,12 @@ socket.on('disconnect', function () {
 $('#stu-semtimetable').on('submit',(e)=>{
     e.preventDefault();
      var semNo=$('#inputSem').val();
-     var name=$('#inputSem option:selected').text();
+     console.log(semNo);
+
      socket.emit('viewSemTimeTable',{
          timeTableType:"sem",
-         timeTableId:semNo,
-         timeTableName:name
+         timeTableId:semNo
+
      },function(err,res){
          if(err){
              console.log(err);
@@ -44,12 +45,13 @@ $('#stu-semtimetable').on('submit',(e)=>{
 $('#stu-labtimetable').on('submit',(e)=>{
     e.preventDefault();
     var labNo=$('#inputlabCode').val();
-    var name=$('#inputlabCode option :selected').text();
-    console.log('hhh');
+
+     console.log('labno',labNo);
+
     socket.emit('viewLabTimeTable',{
         timeTableType:"lab",
         timeTableId:labNo,
-        timeTableName:name
+
 
     },function(err,res){
         if(err){
@@ -82,24 +84,50 @@ $('#search').on('submit',(e)=>{
 });
 
 function loadAllSemesters() {
-    console.log('hiii');
- socket.emit('loadAllSemOptions',{
+
+    socket.emit('loadAllSemOptions',{
      timeTableType:"sem"
- },function(err,res){
+  },function(err,res){
      if(err){
          console.log(err);
      }else{
-         console.log(res);
-         //res.$each()
+         //console.log('AVAILABLE',res);
 
+         for(var index=0;index<res.length;index++){
+
+             $('#inputSem').append($('<option>',{
+                 value:res[index].timeTableId,
+                 text:res[index].timeTableName
+             }));
          }
-         /*for(index=0;index<list.l)
-         var semesterList='<option>'+*/
-
-     });
+     }
+    });
  };
-    
 
+function loadAllLabCodes() {
+
+    socket.emit('loadAllLabOptions',{
+        timeTableType:"lab"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else{
+
+            for(var index=0;index<res.length;index++){
+
+                $('#inputlabCode').append($('<option>', {
+                    value:res[index].timeTableId,
+                    text:res[index].timeTableName
+                }));
+            }
+        }
+    });
+};
+
+
+
+
+loadAllLabCodes();
 
 loadAllSemesters();
 /*$(function(){

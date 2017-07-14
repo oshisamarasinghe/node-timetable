@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc34921a-2780-40a0-a731-e4a39be0bbbc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/LabTimetable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/UserTimetableL.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/UserTimetableS.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/labtimetableL.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/timetable-controller.js" afterPath="$PROJECT_DIR$/controller/timetable-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/lab-time-table.js" afterPath="$PROJECT_DIR$/model/lab-time-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/lec-time-table.js" afterPath="$PROJECT_DIR$/model/lec-time-table.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/sem-time-table.js" afterPath="$PROJECT_DIR$/model/sem-time-table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lecturer.js" afterPath="$PROJECT_DIR$/public/js/lecturer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/student.js" afterPath="$PROJECT_DIR$/public/js/student.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/timetable_reception.js" afterPath="$PROJECT_DIR$/public/js/timetable_reception.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lecture-semesterTimetable.html" afterPath="$PROJECT_DIR$/public/lecture-semesterTimetable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lecturer-labtimetable.html" afterPath="$PROJECT_DIR$/public/lecturer-labtimetable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/lecturer-timetable.html" afterPath="$PROJECT_DIR$/public/lecturer-timetable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/reception-timetable.html" afterPath="$PROJECT_DIR$/public/reception-timetable.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/student-labTimetable.html" afterPath="$PROJECT_DIR$/public/student-labTimetable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/student-labsearch.html" afterPath="$PROJECT_DIR$/public/student-labsearch.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/student-semesterTimetable.html" afterPath="$PROJECT_DIR$/public/student-semesterTimetable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket/lecturer-timetable-socket.js" afterPath="$PROJECT_DIR$/socket/lecturer-timetable-socket.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket/reception-timetable-socket.js" afterPath="$PROJECT_DIR$/socket/reception-timetable-socket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/socket/student-timetable-socket.js" afterPath="$PROJECT_DIR$/socket/student-timetable-socket.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,18 +32,8 @@
       <file leaf-file-name="reception-timetable.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/reception-timetable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="399" column="53" lean-forward="false" selection-start-line="399" selection-start-column="53" selection-end-line="399" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lab-time-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/lab-time-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+            <state relative-caret-position="354">
+              <caret line="381" column="79" lean-forward="true" selection-start-line="381" selection-start-column="79" selection-end-line="381" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -58,28 +42,80 @@
       <file leaf-file-name="student-timetable-socket.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/socket/student-timetable-socket.js">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lecturer-timetable-socket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socket/lecturer-timetable-socket.js">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="430">
-              <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="58" />
+              <caret line="50" column="11" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="50" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lec-time-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/lec-time-table.js">
+      <file leaf-file-name="student.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/student.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state relative-caret-position="-584">
+              <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sem-time-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/sem-time-table.js">
+      <file leaf-file-name="lecturer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/lecturer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="833">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timetable_reception.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/timetable_reception.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="344" column="20" lean-forward="false" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="20" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lecturer-labtimetable.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/lecturer-labtimetable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="160" column="80" lean-forward="true" selection-start-line="160" selection-start-column="73" selection-end-line="160" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student-semesterTimetable.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/student-semesterTimetable.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1540">
+              <caret line="165" column="48" lean-forward="false" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reception-timetable-socket.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/socket/reception-timetable-socket.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="140" column="59" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -88,53 +124,11 @@
       <file leaf-file-name="timetable-controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/timetable-controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="379">
+              <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timetable_reception.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/timetable_reception.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-458">
-              <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student-semesterTimetable.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/student-semesterTimetable.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/student.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student-labsearch.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/student-labsearch.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="157" column="56" lean-forward="false" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="56" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -174,24 +168,24 @@
         <option value="$PROJECT_DIR$/public/timetable_reception.html" />
         <option value="$PROJECT_DIR$/public/lecturer-labsearch.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/lecture-semesterTimetable.html" />
-        <option value="$PROJECT_DIR$/public/student-labTimetable.html" />
-        <option value="$PROJECT_DIR$/public/lecturer-labtimetable.html" />
-        <option value="$PROJECT_DIR$/socket/lecturer-timetable-socket.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/public/js/lecturer.js" />
         <option value="$PROJECT_DIR$/public/lecturer-timetable.html" />
-        <option value="$PROJECT_DIR$/socket/reception-timetable-socket.js" />
         <option value="$PROJECT_DIR$/public/student-labsearch.html" />
-        <option value="$PROJECT_DIR$/public/reception-timetable.html" />
         <option value="$PROJECT_DIR$/model/sem-time-table.js" />
         <option value="$PROJECT_DIR$/model/lec-time-table.js" />
         <option value="$PROJECT_DIR$/model/lab-time-table.js" />
-        <option value="$PROJECT_DIR$/public/js/timetable_reception.js" />
+        <option value="$PROJECT_DIR$/public/student-labTimetable.html" />
         <option value="$PROJECT_DIR$/socket/student-timetable-socket.js" />
-        <option value="$PROJECT_DIR$/public/student-semesterTimetable.html" />
-        <option value="$PROJECT_DIR$/controller/timetable-controller.js" />
+        <option value="$PROJECT_DIR$/public/lecture-semesterTimetable.html" />
+        <option value="$PROJECT_DIR$/public/lecturer-labtimetable.html" />
+        <option value="$PROJECT_DIR$/socket/lecturer-timetable-socket.js" />
+        <option value="$PROJECT_DIR$/public/js/lecturer.js" />
         <option value="$PROJECT_DIR$/public/js/student.js" />
+        <option value="$PROJECT_DIR$/socket/reception-timetable-socket.js" />
+        <option value="$PROJECT_DIR$/controller/timetable-controller.js" />
+        <option value="$PROJECT_DIR$/public/reception-timetable.html" />
+        <option value="$PROJECT_DIR$/public/js/timetable_reception.js" />
+        <option value="$PROJECT_DIR$/public/student-semesterTimetable.html" />
       </list>
     </option>
   </component>
@@ -214,7 +208,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1361" />
+    <option name="width" value="1354" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -235,6 +229,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,7 +332,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -467,35 +461,55 @@
       <workItem from="1499913209966" duration="14426000" />
       <workItem from="1499934460517" duration="6745000" />
       <workItem from="1499952273920" duration="1315000" />
-      <workItem from="1499973622178" duration="12045000" />
+      <workItem from="1499973622178" duration="12168000" />
+      <workItem from="1500003648307" duration="21847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79448000" />
+    <option name="totallyTimeSpent" value="101418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1361" height="744" extended-state="0" />
+    <frame x="-8" y="0" width="1354" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24187453" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2431611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.053156145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.053156145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2431611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.053156145" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -704,27 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/lecture-semesterTimetable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="169" column="85" lean-forward="false" selection-start-line="169" selection-start-column="85" selection-end-line="169" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/student-labTimetable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="169" column="78" lean-forward="false" selection-start-line="169" selection-start-column="78" selection-end-line="169" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/lecturer-labtimetable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -736,9 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2771">
           <caret line="163" column="174" lean-forward="false" selection-start-line="163" selection-start-column="174" selection-end-line="163" selection-end-column="174" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,57 +740,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/lecturer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket/reception-timetable-socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="97" column="51" lean-forward="false" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket/lecturer-timetable-socket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/student-labsearch.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="2669">
           <caret line="157" column="56" lean-forward="false" selection-start-line="157" selection-start-column="50" selection-end-line="157" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/reception-timetable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="399" column="53" lean-forward="false" selection-start-line="399" selection-start-column="53" selection-end-line="399" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/sem-time-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/lec-time-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
+        <state relative-caret-position="816">
           <caret line="48" column="14" lean-forward="false" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
           <folding />
         </state>
@@ -808,42 +758,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/lab-time-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        <state relative-caret-position="833">
+          <caret line="49" column="21" lean-forward="false" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/timetable_reception.js">
+    <entry file="file://$PROJECT_DIR$/model/sem-time-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
+        <state relative-caret-position="396">
+          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/student-labTimetable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="164" column="91" lean-forward="true" selection-start-line="164" selection-start-column="91" selection-end-line="164" selection-end-column="91" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1500010508244" expanded="false" signature="7924:7979" ph="..." />
+            <marker date="1500010508244" expanded="false" signature="10683:10712" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/student-semesterTimetable.html">
+    <entry file="file://$PROJECT_DIR$/public/lecture-semesterTimetable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="162" column="78" lean-forward="false" selection-start-line="162" selection-start-column="73" selection-end-line="162" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/socket/student-timetable-socket.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lecturer-labtimetable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="160" column="80" lean-forward="true" selection-start-line="160" selection-start-column="73" selection-end-line="160" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lecturer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket/lecturer-timetable-socket.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="58" />
+          <caret line="50" column="11" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="50" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/timetable-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        <state relative-caret-position="379">
+          <caret line="90" column="35" lean-forward="false" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -852,8 +835,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/student.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="92" column="11" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="11" />
+        <state relative-caret-position="-584">
+          <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket/reception-timetable-socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="140" column="59" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/reception-timetable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="381" column="79" lean-forward="true" selection-start-line="381" selection-start-column="79" selection-end-line="381" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/timetable_reception.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="344" column="20" lean-forward="false" selection-start-line="344" selection-start-column="20" selection-end-line="344" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/student-semesterTimetable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="165" column="48" lean-forward="false" selection-start-line="165" selection-start-column="48" selection-end-line="165" selection-end-column="48" />
           <folding />
         </state>
       </provider>

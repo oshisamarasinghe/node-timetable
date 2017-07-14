@@ -80,8 +80,6 @@ $('#updt').on('submit',(e)=>{
 
                 $('#pc112').html(res.row11[0]);$('#pc113').html(res.row11[1]);$('#pc114').html(res.row11[2]);$('#pc115').html(res.row11[3]);$('#pc116').html(res.row11[4]);$('#pc117').html(res.row11[5]);
 
-                uniqueId=res._id;
-                console.log(uniqueId);
             }
 
 
@@ -94,6 +92,7 @@ $('#updt').on('submit',(e)=>{
 $('#save-update').on('submit',(e)=>{
     e.preventDefault();
     //var uniqueId=uniqueId;
+
     var id = $('#selectID').val();
     var name=$('#selectID option:selected').text();
     var type = $('#type').val();
@@ -103,27 +102,17 @@ $('#save-update').on('submit',(e)=>{
         timeTableType: type,
         timeTableId: id,
         timeTableName:name,
-
-        /*row1: [$('#pc012').text(), $('#pc013').text(), $('#pc014').text(), $('#pc015').text(), $('#pc016').text(), $('#pc017').text()],
-        row2: [$('#pc022').text(), $('#pc023').text(), $('#pc024').text(), $('#pc025').text(), $('#pc026').text(), $('#pc027').text()],
-        row3: [$('#pc032').text(), $('#pc033').text(), $('#pc034').text(), $('#pc035').text(), $('#pc036').text(), $('#pc037').text()],
-        row4: [$('#pc042').text(), $('#pc043').text(), $('#pc044').text(), $('#pc045').text(), $('#pc046').text(), $('#pc047').text()],
-        row6: [$('#pc062').text(), $('#pc063').text(), $('#pc064').text(), $('#pc065').text(), $('#pc066').text(), $('#pc067').text()],
-        row7: [$('#pc072').text(), $('#pc073').text(), $('#pc074').text(), $('#pc075').text(), $('#pc076').text(), $('#pc077').text()],
-        row8: [$('#pc082').text(), $('#pc083').text(), $('#pc084').text(), $('#pc085').text(), $('#pc086').text(), $('#pc087').text()],
-        row9: [$('#pc092').text(), $('#pc093').text(), $('#pc094').text(), $('#pc095').text(), $('#pc096').text(), $('#pc097').text()],
-        row10: [$('#pc102').text(), $('#pc103').text(), $('#pc104').text(), $('#pc105').text(), $('#pc106').text(), $('#pc107').text()],
-        row11: [$('#pc112').text(), $('#pc113').text(), $('#pc114').text(), $('#pc115').text(), $('#pc116').text(), $('#pc117').text()]
-        */
+        update:true
 
     },function (err,res) {
         if(err){
             return console.log(err);
         }else{
             if(res!=null){
-                console.log(res)
+                then((res)=>{
+                    console.log(res);
+                });
             }
-
         }
     });
 
@@ -175,70 +164,194 @@ $('#viewtable').on('submit',(e)=>{
     });
 
 });
-/*function filltable(){
-    var table=document.getElementById('updateTable');
-    var id = $('#selectID').val();
-    var type = $('#type').val();
-    //console.log(table);
-    socket.emit('LoadTimetable',{
-        timeTableType: type,
-        timeTableId: id
-    },function (err,res) {
+
+function optionList(){
+    var type=$('#tbltype').val();
+
+    switch (type){
+        case 'lec':
+            loadAllLec();
+            break;
+        case 'sem':
+            loadAllSemesters();
+
+            break;
+        case 'lab':
+            loadAllLabCodes();
+            break;
+    }
+
+
+}
+function updateList() {
+
+    var type=$('#type').val();
+
+
+    switch (type){
+        case 'lec':
+
+            loadUpdateLecList();
+            break;
+        case 'sem':
+
+            loadUpdateSemList();
+
+            break;
+        case 'lab':
+
+            loadUpdateLabList();
+            break;
+    }
+
+}
+
+function loadAllSemesters() {
+    document.getElementById('vtbl_id').innerHTML="";
+    socket.emit('loadAllSemOptions',{
+        timeTableType:"sem"
+    },function(err,res){
         if(err){
+            console.log(err);
+        }else {
+            if (res != null) {
 
-        }else{
-            if(res!=null){
-                console.log(res);
-                var responseTable  =[res.row1,res.row2,res.row3,res.row4,res.row6,res.row7,res.row8,res.row9,res.row10,res.row11];
-                console.log('responsetable',responseTable);
-                for(var i=1,row;row=table.rows[i];i++){
-                    for (var j=1,col; col= row.cells[j];j++){
-                        console.log(responseTable[i][j]);
-                    }
+                for (var index = 0; index < res.length; index++) {
 
+                    $('#vtbl_id').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
                 }
-
-
-
             }
         }
-
     });
-}*/
+};
 
-//new timetable  add function
-// function addTable() {
-//     var id = $('#inputID').val();
-//     var type = $('#ttype').val();
-//
-//     if (id === '' || id.trim() === '') {
-//         console.log('id not entered');
-//     }
-//     else {
-//         socket.emit('addNewTable', {
-//             timeTableType: type,
-//             timeTableId: id,
-//             row1: [$('#ac012').text(), $('#ac013').text(), $('#ac014').text(), $('#ac015').text(), $('#ac016').text(), $('#ac017').text()],
-//             row2: [$('#ac022').text(), $('#ac023').text(), $('#ac024').text(), $('#ac025').text(), $('#ac026').text(), $('#ac027').text()],
-//             row3: [$('#ac032').text(), $('#ac033').text(), $('#ac034').text(), $('#ac035').text(), $('#ac036').text(), $('#ac037').text()],
-//             row4: [$('#ac042').text(), $('#ac043').text(), $('#ac044').text(), $('#ac045').text(), $('#ac046').text(), $('#ac047').text()],
-//             row6: [$('#ac062').text(), $('#ac063').text(), $('#ac064').text(), $('#ac065').text(), $('#ac066').text(), $('#ac067').text()],
-//             row7: [$('#ac072').text(), $('#ac073').text(), $('#ac074').text(), $('#ac075').text(), $('#ac076').text(), $('#ac077').text()],
-//             row8: [$('#ac082').text(), $('#ac083').text(), $('#ac084').text(), $('#ac085').text(), $('#ac086').text(), $('#ac087').text()],
-//             row9: [$('#ac092').text(), $('#ac093').text(), $('#ac094').text(), $('#ac095').text(), $('#ac096').text(), $('#ac097').text()],
-//             row10: [$('#ac102').text(), $('#ac103').text(), $('#ac104').text(), $('#ac105').text(), $('#ac106').text(), $('#ac107').text()],
-//             row11: [$('#ac112').text(), $('#ac113').text(), $('#ac114').text(), $('#ac115').text(), $('#ac116').text(), $('#ac117').text()]
-//         });
-//
-//     }
-// }
-//
-///function loadTable() {
-//     var id = $('#selectID').val();
-//     var type = $('#type').val();
-// //console.log(id,type);
-//     socket.emit('loadTimetable', {
-//         timeTableType: type,
-//         timeTableId: id,
-//     });
-// }
+function loadAllLabCodes() {
+    document.getElementById('vtbl_id').innerHTML="";
+    socket.emit('loadAllLabOptions',{
+        timeTableType:"lab"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else {
+            if (res != null) {
+
+                for (var index = 0; index < res.length; index++) {
+
+                    $('#vtbl_id').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
+                }
+            }
+        }
+    });
+};
+function loadAllLec() {
+    document.getElementById('vtbl_id').innerHTML="";
+    socket.emit('loadAllLecOptions',{
+        timeTableType:"lec"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else {
+            if (res != null) {
+
+                for (var index = 0; index < res.length; index++) {
+
+                    $('#vtbl_id').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
+                }
+            }
+        }
+    });
+};
+
+
+function loadUpdateSemList(){
+    document.getElementById('selectID').innerHTML="";
+    socket.emit('loadAllSemOptions',{
+        timeTableType:"sem"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else {
+            console.log(res);
+            if (res != null) {
+
+                for (var index = 0; index < res.length; index++) {
+
+                    $('#selectID').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
+                }
+            }
+        }
+    });
+
+};
+function loadUpdateLecList(){
+    document.getElementById('selectID').innerHTML="";
+    socket.emit('loadAllLecOptions',{
+        timeTableType:"lec"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else {
+            console.log(res);
+            if (res != null) {
+
+                for (var index = 0; index < res.length; index++) {
+
+                    $('#selectID').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
+                }
+            }
+        }
+    });
+
+};
+function loadUpdateLabList(){
+    document.getElementById('selectID').innerHTML="";
+    socket.emit('loadAllLabOptions',{
+        timeTableType:"lec"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else {
+            console.log(res);
+            if (res != null) {
+
+                for (var index = 0; index < res.length; index++) {
+
+                    $('#selectID').append($('<option>', {
+                        value: res[index].timeTableId,
+                        text: res[index].timeTableName
+                    }));
+                }
+            }
+        }
+    });
+
+};
+loadAllSemesters();
+loadUpdateSemList();
+
+
+
+
+
+/*$().on('change', 'select', function() {
+    console.log('hello ');
+    console.log($(this).val()); // the selected options’s value
+
+    // if you want to do stuff based on the OPTION element:
+    //var opt = $(this).find('option:selected')[0];
+    // use switch or if/else etc.*/

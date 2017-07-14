@@ -211,7 +211,7 @@
                                                             <label for="inputID"
                                                                    style="color: #080808;font-size: small">IDENTITY </label>
                                                             <input type="text" class="form-control"
-                                                                   placeholder="time table ID" id="inputID">
+                                                                   placeholder="time table ID" id="inputID" >
 
                                                         </div>
 
@@ -363,7 +363,7 @@
                                                         <div class="form-group" align="left">
                                                             <label for="type" style="color: #080808;font-size: medium">Timetable
                                                                 type</label>
-                                                            <select class="form-control" id="type">
+                                                            <select class="form-control" id="type" onchange="updateList()">
                                                                 <option value="sem">Semester Timetable</option>
                                                                 <option value="lec">Lecturer Timetable</option>
                                                                 <option value="lab">Lab Timetable</option>
@@ -376,8 +376,8 @@
                  <div class="col-md-4">
                      <div class="form-group" align="left">
                              <label for="selectID" style="color: #080808;font-size: small">Table ID: </label>
-                                <select class="form-control" id="selectID">
-                                    <option value="lab1">LAB1-LEVEL 1 LAB</option>
+                                <select class="form-control" id="selectID" >
+                                    <!--option value="lab1">LAB1-LEVEL 1 LAB</option>
                                      <option value="lab2">LAB2-LEVEL 2 LAB</option>
                                      <option value="lab3">LAB3-ICE LAB</option>
                                       <option value="lab4">LAB4-NETWORK LAB</option>
@@ -388,7 +388,7 @@
                                       <option value="sem05">Semester 5</option>
                                       <option value="sem06">Semester 6</option>
                                       <option value="sem07">Semester 7</option>
-                                      <option value="sem08">Semester 8</option>
+                                      <option value="sem08">Semester 8</option-->
                                 </select>
                              </div>
                           </div>
@@ -584,7 +584,7 @@
                                             <div class="form-group" align="left">
                                                 <label for="tbltype" style="color: #080808;font-size: medium">Timetable
                                                     type</label>
-                                                <select class="form-control" id="tbltype">
+                                                <select class="form-control" id="tbltype" onchange="optionList()">
                                                     <option value="sem">Semester Timetable</option>
                                                     <option value="lec">Lecturer Timetable</option>
                                                     <option value="lab">Lab Timetable</option>
@@ -600,7 +600,7 @@
                                                         <label for="vtbl_id" style="color: #080808;font-size: medium">Table
                                                             ID </label>
                                                         <select class="form-control" id="vtbl_id">
-                                                            <option value="lab1">LAB1-LEVEL 1 LAB</option>
+                                                            <!--option value="lab1">LAB1-LEVEL 1 LAB</option>
                                                             <option value="lab2">LAB2-LEVEL 2 LAB</option>
                                                             <option value="lab3">LAB3-ICE LAB</option>
                                                             <option value="lab4">LAB4-NETWORK LAB</option>
@@ -611,7 +611,7 @@
                                                             <option value="sem05">Semester 5</option>
                                                             <option value="sem06">Semester 6</option>
                                                             <option value="sem07">Semester 7</option>
-                                                            <option value="sem08">Semester 8</option>
+                                                            <option value="sem08">Semester 8</option-->
                                                         </select>
                                                     </div>
                                                     <div align="left">

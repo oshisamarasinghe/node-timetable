@@ -121,6 +121,29 @@ class ReceptionTimeTableSocket {
                 });
             }
         });
+        socket.on('loadAllSemOptions', (timetable, callback) => {
+            timetableController.loadAvailableSemTimeTables(timetable).then((res) => {
+                callback(undefined, res);
+            }, (err) => {
+                callback(err);
+            });
+
+
+        });
+        socket.on('loadAllLabOptions',(timetable,callback)=>{
+            timetableController.loadAvailableLabTimeTables(timetable).then((res)=>{
+                callback(undefined, res);
+            },(err)=>{
+                callback(err);
+            });
+        });
+        socket.on('loadAllLecOptions',(timetable,callback)=>{
+            timetableController.loadAvailableLecTimeTables(timetable).then((res)=>{
+                callback(undefined, res);
+            },(err)=>{
+                callback(err);
+            });
+        });
 
 
     }

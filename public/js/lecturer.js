@@ -43,11 +43,11 @@ $('#lec-timetable').on('submit',(e)=>{
 $('#lec-labtimetable').on('submit',(e)=>{
     e.preventDefault();
     var labId=$('#labCode').val();
-    var name=$('#labCode option:selected').text();
+
     socket.emit('viewLabTimeTable',{
         timeTableType:"lab",
         timeTableId:labId,
-        timeTableName:name
+
     },function(err,res){
         if(err){
             console.log(err);
@@ -75,11 +75,10 @@ $('#lec-labtimetable').on('submit',(e)=>{
 $('#lec-semtimetable').on('submit',(e)=>{
     e.preventDefault();
     var semNo=$('#SemNo').val();
-    var name=$('#SemNo option:selected').text();
     socket.emit('viewSemTimeTable',{
         timeTableType:"sem",
         timeTableId:semNo,
-        timeTableName:name
+
 
     },function(err,res){
         if(err){
@@ -104,3 +103,48 @@ $('#lec-semtimetable').on('submit',(e)=>{
     });
 
 });
+function loadAllSemesters() {
+
+    socket.emit('loadAllSemOptions',{
+        timeTableType:"sem"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else{
+
+            for(var index=0;index<res.length;index++){
+
+                $('#SemNo').append($('<option>',{
+                    value:res[index].timeTableId,
+                    text:res[index].timeTableName
+                }));
+            }
+        }
+    });
+};
+
+function loadAllLabCodes() {
+
+    socket.emit('loadAllLabOptions',{
+        timeTableType:"lab"
+    },function(err,res){
+        if(err){
+            console.log(err);
+        }else{
+
+            for(var index=0;index<res.length;index++){
+
+                $('#labCode').append($('<option>',{
+                    value:res[index].timeTableId,
+                    text:res[index].timeTableName
+                }));
+            }
+        }
+    });
+};
+
+
+
+loadAllLabCodes();
+
+loadAllSemesters();

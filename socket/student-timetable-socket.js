@@ -34,6 +34,13 @@ class StudentTimeTableSocket {
 
 
         });
+        socket.on('loadAllLabOptions',(timetable,callback)=>{
+            timetableController.loadAvailableLabTimeTables(timetable).then((res)=>{
+                callback(undefined, res);
+            },(err)=>{
+                callback(err);
+            });
+        });
     };
 }
 module.exports={StudentTimeTableSocket};
